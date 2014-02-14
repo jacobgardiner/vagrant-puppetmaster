@@ -12,4 +12,6 @@ if ! rpm -qa | grep -qw puppetlabs-release; then
 fi
 
 # Install Puppet
-yum install puppet -y
+if ! rpm -qa | grep -qw puppet; then
+	yum install puppet -y
+fi
