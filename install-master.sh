@@ -15,3 +15,7 @@ fi
 if ! rpm -qa | grep -qw puppet; then
 	yum install puppet -y
 fi
+
+# Disable iptables 
+/etc/init.d/iptables stop
+rm /etc/sysconfig/iptables
