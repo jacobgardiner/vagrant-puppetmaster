@@ -18,4 +18,5 @@ Boot up the vagrant environment
     $ vagrant up
 
 Then provision puppet
+
     $ vagrant provision
