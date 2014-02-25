@@ -19,3 +19,7 @@ fi
 # Disable iptables 
 /etc/init.d/iptables stop
 rm /etc/sysconfig/iptables
+
+# Disable SELinux
+sed -i 's/enforcing/permissive/' /etc/selinux/config
+echo 0 >/selinux/enforce
